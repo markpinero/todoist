@@ -3,18 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "instadate": "^0.5.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-fontawesome": "^1.6.1",
+    "react-redux": "^5.0.5",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0",
     "styled-components": "^1.4.6"
   },
   "devDependencies": {
-    "react-scripts": "1.0.6"
+    "gh-pages": "^1.0.0",
+    "react-scripts": "1.0.6",
+    "redux-devtools-extension": "^2.13.2"
   },
   "scripts": {
     "start": "NODE_PATH=src react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "build": "NODE_PATH=src react-scripts build",
+    "test": "NODE_PATH=src react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   }
 }
